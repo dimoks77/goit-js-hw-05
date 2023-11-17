@@ -1,8 +1,22 @@
-getUsersWithFriend = (users, friendName) => {
-    userNames = users.map(user => user.name);
-    newArray  = users.filter(user => user.friends.includes(friendName));
-    return newArray;
-};
+let users;
+
+// getUsersWithFriend = (users, friendName) => {
+   
+//   function extractFriends(user) {
+//        return user.friends;
+//    }
+   
+//    let filteredUsers = users.filter(function(user) {
+//         return extractFriends(user).includes(friendName);
+//   });
+
+//   return filteredUsers;
+// }
+
+
+getUsersWithFriend = (users, friendName) => users.filter(user => user.friends.includes(friendName));
+
+
 
 const allUsers = [
   {

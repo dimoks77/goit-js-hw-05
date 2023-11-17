@@ -1,5 +1,17 @@
 
-getUserNames = users => users.map(user => user.name);
+  
+// let getUserNames = (users) => {
+//   function extractUserName(user) {
+//     return user.name;
+//   }
+//   let userNamesArray = users.map(extractUserName);
+//   return userNamesArray;
+// };
+
+
+
+getUserNames = users => users.map(user => user.name); 
+
 
 console.log(
   getUserNames([
