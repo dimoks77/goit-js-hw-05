@@ -1,30 +1,13 @@
+// let sortByDescendingFriendCount = (users) => {
+//     users.sort(function(a, b) {
+//       return b.friends.length - a.friends.length;
+//     });
+//    return users;
+// }
 
-    // sortByDescendingFriendCount = (users, friendName) => {
-    //   let newArray = users.filter((user) =>
-    //     user.friends.some((friend) => friend.name === friendName)
-    //   );
-    //   newArray.sort((a, b) => b.friends.length - a.friends.length);
-    //   return newArray;
-    // };
-
-
-function sortByDescendingFriendCount(users, friendName) {
-  // Фильтрация пользователей по наличию друга с заданным именем
-  let filteredUsers = users.filter(function (user) {
-    return user.friends.some(function (friend) {
-      return friend.name === friendName;
-    });
-  });
-
-  // Сортировка отфильтрованных пользователей по убыванию количества друзей
-  filteredUsers.sort(function (a, b) {
-    return b.friends.length - a.friends.length;
-  });
-
-  // Возврат отсортированного массива
-  return filteredUsers;
-}
-
+let sortByDescendingFriendCount = (users) => {
+  return users.sort((a, b) => b.friends.length - a.friends.length);
+};
 
 console.log(
     sortByDescendingFriendCount([
